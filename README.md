@@ -32,7 +32,7 @@ It's essential to understand what data analytics really is. Look at the image be
 ## Create Database and Schema
 
 The first thing we're going to do is create a database named 'DataWarehouseAnalytics' after checking if it already exists. If the database exists, it is dropped and recreated. Additionally, we create a schema called gold.  
-`
+```
 USE master;
 GO
 
@@ -133,5 +133,5 @@ WITH (
 	TABLOCK
 );
 GO
-`
+```
 
