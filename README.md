@@ -18,4 +18,9 @@ It's essential to understand what data analytics really is. This can be divided 
 - **Exploratory Data Analysis (EDA)** to explore and understand the structure, dimensions, and patterns within the data.
 - **Advanced Analytics** to generate insights, track performance, and support decision-making using the organized data.  
 
-Look at the image below:
+Look at the image below:  
+![](https://github.com/Mufalta/SQL-Data-Analytics-Project/blob/main/images/Data-Analytics.png)
+
+---
+
+
