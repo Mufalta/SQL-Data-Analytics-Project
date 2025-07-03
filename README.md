@@ -17,4 +17,5 @@ On this page, we're going to dive into a thorough analysis to find some business
 It's essential to understand what data analytics really is. This can be divided into two parts:
 - **Exploratory Data Analysis (EDA)** to explore and understand the structure, dimensions, and patterns within the data.
 - **Advanced Analytics** to generate insights, track performance, and support decision-making using the organized data.  
+
 Look at the image below:
