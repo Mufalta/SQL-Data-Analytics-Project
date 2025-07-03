@@ -99,7 +99,6 @@ CREATE TABLE gold.fact_sales(
 GO
 
 -- Insert Data
-
 TRUNCATE TABLE gold.dim_customers;
 GO
 
