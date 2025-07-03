@@ -51,11 +51,11 @@ GO
 USE DataWarehouseAnalytics;
 GO
 
--- Create Schemas
-
+-- Create Schema
 CREATE SCHEMA gold;
 GO
 
+-- Create Tables
 CREATE TABLE gold.dim_customers(
 	customer_key int,
 	customer_id int,
@@ -98,6 +98,8 @@ CREATE TABLE gold.fact_sales(
 );
 GO
 
+-- Insert Data
+
 TRUNCATE TABLE gold.dim_customers;
 GO
 
@@ -134,4 +136,8 @@ WITH (
 );
 GO
 ```
+
+---
+
+
 
