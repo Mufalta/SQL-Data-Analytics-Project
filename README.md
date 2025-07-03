@@ -8,17 +8,22 @@ On this page, we're going to dive into a thorough analysis to find some business
 
 ## Table of Contents
 
-1. [What is Data Analytics](#what-is-data-analytics)
+1. [Project Overview](#project-overview)
+2. [What is Data Analytics](#what-is-data-analytics)
 
 ---
 
+## Project Overview
+
+This project involves:
+1. **Exploratory Data Analysis (EDA)** to explore and understand the structure, dimensions, and patterns within the data.
+2. **Advanced Analytics** to generate insights, track performance, and support decision-making using the organized data.
+
+--
+
 ## What is Data Analytics
 
-It's essential to understand what data analytics really is. This can be divided into two parts:
-- **Exploratory Data Analysis (EDA)** to explore and understand the structure, dimensions, and patterns within the data.
-- **Advanced Analytics** to generate insights, track performance, and support decision-making using the organized data.  
-
-Look at the image below:  
+It's essential to understand what data analytics really is. Look at the image below:  
 ![](https://github.com/Mufalta/SQL-Data-Analytics-Project/blob/main/images/Data-Analytics.png)
 
 ---
