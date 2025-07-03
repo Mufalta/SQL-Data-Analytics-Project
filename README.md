@@ -19,7 +19,7 @@ This project involves:
 1. **Exploratory Data Analysis (EDA)** to explore and understand the structure, dimensions, and patterns within the data.
 2. **Advanced Analytics** to generate insights, track performance, and support decision-making using the organized data.
 
---
+---
 
 ## What is Data Analytics
 
