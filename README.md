@@ -16,6 +16,7 @@ On this page, we're going to dive into a thorough analysis to find some business
 6. [Date Range Exploration](#date-range-exploration)
 7. [Measures Exploration](#measures-exploration)
 8. [Magnitude Analysis](#magnitude-analysis)
+9. [Ranking Analysis](#ranking-analysis)
 
 ---
 
@@ -327,4 +328,75 @@ ORDER BY total_sold_items DESC;
 
 ---
 
+## Ranking Analysis
+
+This section ranks items (e.g., products, customers) based on performance or other metrics to identify top performers.
+``` sql
+-- Which 5 products generate the Highest Revenue?
+-- Simple Ranking
+SELECT TOP 5
+    p.product_name,
+    SUM(f.sales_amount) AS total_revenue
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+    ON p.product_key = f.product_key
+GROUP BY p.product_name
+ORDER BY total_revenue DESC;
+
+-- Complex but Flexible Ranking Using Window Functions
+SELECT *
+FROM (
+    SELECT
+        p.product_name,
+        SUM(f.sales_amount) AS total_revenue,
+        RANK() OVER (ORDER BY SUM(f.sales_amount) DESC) AS rank_products
+    FROM gold.fact_sales f
+    LEFT JOIN gold.dim_products p
+        ON p.product_key = f.product_key
+    GROUP BY p.product_name
+) AS ranked_products
+WHERE rank_products <= 5;
+
+-- What are the 5 worst-performing products in terms of sales?
+SELECT TOP 5
+    p.product_name,
+    SUM(f.sales_amount) AS total_revenue
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_products p
+    ON p.product_key = f.product_key
+GROUP BY p.product_name
+ORDER BY total_revenue;
+
+-- Find the top 10 customers who have generated the highest revenue
+SELECT TOP 10
+    c.customer_key,
+    c.first_name,
+    c.last_name,
+    SUM(f.sales_amount) AS total_revenue
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_customers c
+    ON c.customer_key = f.customer_key
+GROUP BY 
+    c.customer_key,
+    c.first_name,
+    c.last_name
+ORDER BY total_revenue DESC;
+
+-- The 3 customers with the fewest orders placed
+SELECT TOP 3
+    c.customer_key,
+    c.first_name,
+    c.last_name,
+    COUNT(DISTINCT order_number) AS total_orders
+FROM gold.fact_sales f
+LEFT JOIN gold.dim_customers c
+    ON c.customer_key = f.customer_key
+GROUP BY 
+    c.customer_key,
+    c.first_name,
+    c.last_name
+ORDER BY total_orders ;
+```
+
+---
 
