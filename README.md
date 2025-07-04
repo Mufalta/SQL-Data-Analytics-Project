@@ -13,6 +13,7 @@ On this page, we're going to dive into a thorough analysis to find some business
 3. [Create Database and Schema](#create-database-and-schema)
 4. [Database Exploration](#database-exploration)
 5. [Dimensions Exploration](#dimensions-exploration)
+6. [Date Range Exploration](#date-range-exploration)
 
 ---
 
@@ -185,5 +186,26 @@ ORDER BY category, subcategory, product_name;
 
 ---
 
+## Date Range Exploration
+
+This section determines the temporal boundaries of key data points to understand the range of historical data.
+```sql
+-- Determine the first and last order date and the total duration in months
+SELECT 
+    MIN(order_date) AS first_order_date,
+    MAX(order_date) AS last_order_date,
+    DATEDIFF(MONTH, MIN(order_date), MAX(order_date)) AS order_range_months
+FROM gold.fact_sales;
+
+-- Find the youngest and oldest customer based on birthdate
+SELECT
+    MIN(birthdate) AS oldest_birthdate,
+    DATEDIFF(YEAR, MIN(birthdate), GETDATE()) AS oldest_age,
+    MAX(birthdate) AS youngest_birthdate,
+    DATEDIFF(YEAR, MAX(birthdate), GETDATE()) AS youngest_age
+FROM gold.dim_customers;
+```
+
+---
 
 
