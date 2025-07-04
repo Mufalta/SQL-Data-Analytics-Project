@@ -12,6 +12,7 @@ On this page, we're going to dive into a thorough analysis to find some business
 2. [What is Data Analytics](#what-is-data-analytics)
 3. [Create Database and Schema](#create-database-and-schema)
 4. [Database Exploration](#database-exploration)
+5. [Dimensions Exploration](#dimensions-exploration)
 
 ---
 
@@ -159,6 +160,27 @@ SELECT
     CHARACTER_MAXIMUM_LENGTH
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'dim_customers';
+```
+
+---
+
+## Dimensions Exploration
+
+This section explores the structure of dimension tables.
+``` sql
+-- Retrieve a list of unique countries from which customers originate
+SELECT DISTINCT 
+    country 
+FROM gold.dim_customers
+ORDER BY country;
+
+-- Retrieve a list of unique categories, subcategories, and products
+SELECT DISTINCT 
+    category, 
+    subcategory, 
+    product_name 
+FROM gold.dim_products
+ORDER BY category, subcategory, product_name;
 ```
 
 ---
