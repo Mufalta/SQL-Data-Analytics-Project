@@ -9,21 +9,22 @@ On this page, we're going to dive into a thorough analysis to find some business
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [What is Data Analytics](#what-is-data-analytics)
-3. [Create Database and Schema](#create-database-and-schema)
-4. [Database Exploration](#database-exploration)
-5. [Dimensions Exploration](#dimensions-exploration)
-6. [Date Range Exploration](#date-range-exploration)
-7. [Measures Exploration](#measures-exploration)
-8. [Magnitude Analysis](#magnitude-analysis)
-9. [Ranking Analysis](#ranking-analysis)
-10. [Change Over Time Analysis](#change-over-time-analysis)
-11. [Cumulative Analysis](#cumulative-analysis)
-12. [Performance Analysis](#performance-analysis)
-13. [Part to Whole Analysis](#part-to-whole-analysis)
-14. [Data Segmentation](#data-segmentation)
-15. [Report Customers](#report-customers)
-16. [Report Products](#report-products)
+2. [Business Objective](#business-objective)
+3. [What is Data Analytics](#what-is-data-analytics)
+4. [Create Database and Schema](#create-database-and-schema)
+5. [Database Exploration](#database-exploration)
+6. [Dimensions Exploration](#dimensions-exploration)
+7. [Date Range Exploration](#date-range-exploration)
+8. [Measures Exploration](#measures-exploration)
+9. [Magnitude Analysis](#magnitude-analysis)
+10. [Ranking Analysis](#ranking-analysis)
+11. [Change Over Time Analysis](#change-over-time-analysis)
+12. [Cumulative Analysis](#cumulative-analysis)
+13. [Performance Analysis](#performance-analysis)
+14. [Part to Whole Analysis](#part-to-whole-analysis)
+15. [Data Segmentation](#data-segmentation)
+16. [Report Customers](#report-customers)
+17. [Report Products](#report-products)
 
 ---
 
@@ -32,6 +33,12 @@ On this page, we're going to dive into a thorough analysis to find some business
 This project involves:
 1. **Exploratory Data Analysis (EDA):** to explore and understand the structure, dimensions, and patterns within the data.
 2. **Advanced Analytics:** to generate insights, track performance, and support decision-making using the organized data.
+
+---
+
+## Business Objective
+
+
 
 ---
 
