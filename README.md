@@ -545,8 +545,8 @@ ORDER BY total_sales DESC;
 
 This section groups data into meaningful categories for targeted insights for customer segmentation or product categorization
 ``` sql
-/*Segment products into cost ranges and 
-count how many products fall into each segment*/
+/* Segment products into cost ranges and 
+count how many products fall into each segment */
 WITH product_segments AS (
     SELECT
         product_key,
@@ -567,12 +567,11 @@ FROM product_segments
 GROUP BY cost_range
 ORDER BY total_products DESC;
 
-/*Group customers into three segments based on their spending behavior:
+/* Group customers into three segments based on their spending behavior:
 	- VIP: Customers with at least 12 months of history and spending more than €5,000.
 	- Regular: Customers with at least 12 months of history but spending €5,000 or less.
 	- New: Customers with a lifespan less than 12 months.
-And find the total number of customers by each group
-*/
+And find the total number of customers by each group */
 WITH customer_spending AS (
     SELECT
         c.customer_key,
