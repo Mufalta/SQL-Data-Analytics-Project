@@ -271,7 +271,7 @@ SELECT 'Total Customers', COUNT(customer_key) FROM gold.dim_customers;
 
 ## Magnitude Analysis
 
-This section quantifies data and group results by specific dimensions for understanding data distribution across categories.
+This section quantifies data and group results by specific dimensions for understanding data distribution.
 ``` sql
 -- Find total customers by countries
 SELECT
