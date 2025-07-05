@@ -543,7 +543,7 @@ ORDER BY total_sales DESC;
 
 ## Data Segmentation
 
-This section groups data into meaningful categories for targeted insights for customer segmentation or product categorization
+This section groups data into meaningful categories for targeted insights for customer segmentation or product categorization.
 ``` sql
 /* Segment products into cost ranges and 
 count how many products fall into each segment */
