@@ -32,13 +32,15 @@ On this page, we're going to dive into a thorough analysis to find some business
 
 This project involves:
 1. **Exploratory Data Analysis (EDA):** to explore and understand the structure, dimensions, and patterns within the data.
-2. **Advanced Analytics:** to generate insights, track performance, and support decision-making using the organized data.
+2. **Advanced Analytics:** to generate insights, track performance, and support decision-making using organized data.
 
 ---
 
 ## Business Objective
 
-
+There are two kinds of reports made in this project:
+1. **Report Customers**: to consolidate key customer metrics and behaviors.
+2. **Report Products**: to consolidate key product metrics and behaviors.
 
 ---
 
